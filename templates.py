@@ -37,6 +37,13 @@ Eg:
 {% endif %}
 """
 
+"""
+for loop syntax for jinja2:
+{% for statement %}
+	body
+{% endfor %}
+"""
+
 class Handler(webapp2.RequestHandler):
 	def write(self, *a, **kw):
 		self.response.write(*a, **kw)
@@ -70,6 +77,8 @@ class MainPage(Handler):
 	def get(self):
 		# Getting variable n from the request
 		n = self.request.get('n')
+		if n.isdigit():
+			n = int(n)
 
 		self.render("shopping_list.html", n=n)
 
