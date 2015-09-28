@@ -55,7 +55,7 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
 	def get(self):
-		self.render("shopping_list.html")
+		self.render("shopping_list.html", name=self.request.get('name'))
 
 		# Commenting out other stuff (as below) for now
 		"""
