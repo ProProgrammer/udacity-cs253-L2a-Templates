@@ -23,6 +23,19 @@ shopping_list_html = """
 </ul>
 """
 
+"""
+Statement Syntax for jinja2:
+{% statement %}
+	output
+{% end statement %}
+
+Eg:
+{% if name=="Deep" %}
+	Hello Deep
+{% else %}
+	Who are you?
+{% endif %}
+"""
 
 class Handler(webapp2.RequestHandler):
 	def write(self, *a, **kw):
@@ -55,7 +68,10 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
 	def get(self):
-		self.render("shopping_list.html", name=self.request.get('name'))
+		# Getting variable n from the request
+		n = self.request.get('n')
+
+		self.render("shopping_list.html", n=n)
 
 		# Commenting out other stuff (as below) for now
 		"""
