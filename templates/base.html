@@ -1,0 +1,20 @@
+<!-- 
+This template will have some common elements such as title and may be header/footer/navigation bar/etc.
+We will inherit from this template into other templates like shopping_list.html and fizzbuzz.html
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Udacity CS253 Templates</title>
+	</head>
+	
+	<body style="margin: 0">
+		<h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px">
+			Udacity Templates
+		</h1>
+
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>
