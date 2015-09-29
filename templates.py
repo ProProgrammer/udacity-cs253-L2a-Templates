@@ -1,4 +1,12 @@
 """
+Helpful Tips:
+
+# Always automatically escape variables when possible, done using autoescape=True in case of jinja2 templating engine
+# Minimize code in templates
+# minimize html in code
+"""
+
+"""
 Statement Syntax for jinja2:
 {% statement %}
     output
