@@ -7,6 +7,15 @@ Helpful Tips:
 """
 
 """
+Benefits of Templates:
+# Separate different types of code
+# make more readable code
+# make more secure websites (eg: autoescape feature in jinja2)
+# html that is easier to modify (as everything goes in templates and there is inheritance to prevent code repetition)
+"""
+
+
+"""
 Statement Syntax for jinja2:
 {% statement %}
     output
